@@ -93,7 +93,7 @@ body{
         }
   
   .navbar{
-    background-color:#3b5998;
+    background-color:#1085c4;
     overflow:hidden;
     height:63px;
   }
@@ -131,6 +131,7 @@ body{
   .side-nav a{
     padding:10px 10px 10px 30px;
     text-decoration:none;
+    font-family:'Roboto slab',serif;
     font-size:22px;
     color:#ccc;
     display:block;
