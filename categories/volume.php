@@ -49,7 +49,52 @@ $volume_options = array(
   <link rel="stylesheet" href="../css/simp-Volume.css" />
   <title>Convert Volume</title>
   <script>
-    alert("If you want to calculate entries in batch click the side button");
+    //Alert message once script- By JavaScript Kit
+    //Credit notice must stay intact for use
+    //Visit http://javascriptkit.com for this script
+
+    //specify message to alert
+    var alertmessage = "Click Side button to calculate measurements in batch"
+
+    ///No editing required beyond here/////
+
+    //Alert only once per browser session (0=no, 1=yes)
+    var once_per_session = 1
+
+
+    function get_cookie(Name) {
+      var search = Name + "="
+      var returnvalue = "";
+      if (document.cookie.length > 0) {
+        offset = document.cookie.indexOf(search)
+        if (offset != -1) { // if cookie exists
+          offset += search.length
+          // set index of beginning of value
+          end = document.cookie.indexOf(";", offset);
+          // set index of end of cookie value
+          if (end == -1)
+            end = document.cookie.length;
+          returnvalue = unescape(document.cookie.substring(offset, end))
+        }
+      }
+      return returnvalue;
+    }
+
+    function alertornot() {
+      if (get_cookie('alerted') == '') {
+        loadalert()
+        document.cookie = "alerted=yes"
+      }
+    }
+
+    function loadalert() {
+      alert(alertmessage)
+    }
+
+    if (once_per_session == 0)
+      loadalert()
+    else
+      alertornot()
   </script>
 </head>
 
@@ -78,10 +123,10 @@ $volume_options = array(
     <a href=" area.php">Area</a>
     <a href=" volume.php">Volume</a>
     <a href=" weight.php">Weight</a>
-    
+
     <a href=" speed.php">Speed</a>
-    <a href="../login">Log in</a>
-    <a href="../login/signup.php">Sign up</a>
+    <a href="../login/index.html">Log in</a>
+    <a href="../login/index.html">Sign up</a>
 
   </div>
 

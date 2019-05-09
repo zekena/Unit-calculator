@@ -107,10 +107,10 @@ $temp_options = array(
     <a href=" area.php">Area</a>
     <a href=" volume.php">Volume</a>
     <a href=" weight.php">Weight</a>
-    
+
     <a href=" speed.php">Speed</a>
-    <a href="../login">Log in</a>
-    <a href="../login/signup.php">Sign up</a>
+    <a href="../login/index.html">Log in</a>
+    <a href="../login/index.html">Sign up</a>
 
   </div>
 
