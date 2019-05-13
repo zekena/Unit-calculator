@@ -130,7 +130,7 @@ $mass_options = array(
 
   </div>
 
-  <script src="../js/frontSide.js"></script>
+  <script src="../js/slide.js"></script>
   <div id="title">
     <h1>Weight</h1>
   </div>

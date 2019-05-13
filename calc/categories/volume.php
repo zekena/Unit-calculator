@@ -95,7 +95,7 @@ $volume_options = array(
 
   </div>
 
-  <script src="../js/frontSide.js"></script>
+  <script src="../js/slide.js"></script>
   <div id="title">
     <h1>Volume</h1>
   </div>

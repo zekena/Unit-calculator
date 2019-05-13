@@ -77,7 +77,7 @@ $speed_options = array(
 
   </div>
 
-  <script src="../js/frontSide.js"></script>
+  <script src="../js/slide.js"></script>
   <div id="title">
     <h1>Speed</h1>
   </div>
@@ -97,7 +97,7 @@ $speed_options = array(
               foreach ($speed_options as $unit) {
                 $opt = optionize($unit);
                 echo "<option value=\"{$opt}\"";
-                if ($from_unit == $opt) {
+                if ($_POST[$from_unit] == $opt) {
                   echo " selected";
                 }
                 echo ">{$unit}</option>";

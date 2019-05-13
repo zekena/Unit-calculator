@@ -145,7 +145,7 @@ function length_options(){
 
   </div>
 
-  <script src="../js/frontSide.js"></script>
+  <script src="../js/slide.js"></script>
   <div id="title">
     <h1>Length</h1>
   </div>

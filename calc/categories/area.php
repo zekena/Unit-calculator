@@ -111,7 +111,7 @@ function area_options()
 
   </div>
 
-  <script src="../js/frontSide.js"></script>
+  <script src="../js/slide.js"></script>
   <div id="title">
     <h1>Area</h1>
   </div>
