@@ -70,9 +70,8 @@ function protect($string){
         var email = $("#email").val();
         var password = $("#password").val();
         var continue = $("#continue").val();
-        if (email.length == 0 && password.length == 0 && username.length == 0)
+        if (email.length == 0 || password.length == 0 || username.length == 0)
           alert('Please check input');
-          //continue;
         else{
             $.ajax(
             {
