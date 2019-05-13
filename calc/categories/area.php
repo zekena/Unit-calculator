@@ -1,7 +1,5 @@
 <?php
 
-require('dbconnect.php');
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 // Definitions 
 if (file_exists('dbconnect.php')) {
     require('dbconnect.php');
@@ -30,12 +28,9 @@ if ($_POST['submit']) {
     //$mysqli = new mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
     // mysql_query("INSERT INTO area_entry (from_unit,to_unit,from_value,to_value) VALUES ()");
     $sql = "INSERT INTO area_entry(from_unit,to_unit,from_value,to_value) VALUES ('$from_unit','$to_unit','$from_value','$to_value');";
-    echo $sql;
     if (!mysqli_query($link, $sql)) {
         die('An error occurred when submitting your review.');
-    } else {
-        echo "Thanks for your review.";
-    }
+    } 
     /*
   if($link->query($sql)){
       echo "Record Added";

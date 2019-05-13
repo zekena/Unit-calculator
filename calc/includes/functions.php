@@ -1,5 +1,12 @@
 <?php
 
+function list_option($arr){
+  $choice = '';
+  while(list($k,$v)=each($arr))
+  {
+    $choice.='<option value = "'.$k.'">'.$k.'</option>';
+  }
+}
  // defines array of length and area
  // acres and hectares are squared due to function parameters
 define('LENGTH_TO_METER',array(

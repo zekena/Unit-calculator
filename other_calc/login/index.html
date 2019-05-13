@@ -31,31 +31,22 @@
           <div class="top-row">
             <div class="field-wrap">
               <label>
-                First Name<span class="req">*</span>
+                Username<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input type="text"  id="username" required autocomplete="off" />
             </div>
-        
-            <div class="field-wrap">
-              <label>
-                Last Name<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off"/>
-            </div>
-          </div>
-
           <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input type="email" id= "email" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Set A Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input type="password" id="password" required autocomplete="off"/>
           </div>
           
           <button type="submit" class="button button-block"/>Get Started</button>
@@ -100,7 +91,39 @@
 
     <script  src="js/index.js"></script>
 
-
+  <script src="../js/jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#login").on('click',function(){
+        var username = $("#username").val();
+        var email = $("#email").val();
+        var password= $("#password").val();
+        if (email == "" || password == "" || username == "")
+          alert('Please check input');
+        else{
+            $.ajax(
+            {
+              url: 'login.php',
+              method: 'POST',
+              data: {
+                login: 1,
+                emailPHP : email,
+                usernamePHP : username,
+                passwordPHP : password
+              },
+              success: function (response) {
+                $("#response").html(response);
+                if(response.indexOf('success')>-1){
+                  window.location = '../home.php';
+                }
+              },
+              dataType: 'text'
+            }
+          );
+        }
+      });
+    });
+  </script>
 
 
 </body>

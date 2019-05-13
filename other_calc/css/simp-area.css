@@ -44,75 +44,16 @@
   box-sizing: border-box;
 }
 
-body{
-    background-image: url("../speed.png");
+body{   background-image: url("../page_img/area.jpg");
     background-repeat:no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     text-align: center;
 
 }
-.navbar{
-    overflow:hidden;
-  }
-  
-  .navbar a{
-    float:left;
-    display:block;
-    color:#f2f2f2;
-    text-align:center;
-    padding:14px 16px;
-    text-decoration:none;
-    font-size:17px;
-  }
-  
-  
-  .navbar a:hover{
-    background-color:rgb(247, 57, 103);
-    /* color:#000; */
-  }
-  
-  .side-nav{
-    height:120%;
-    width:0;
-    position:absolute;
-    z-index:1;
-    top:0;
-    left:0;
-    background-color:rgb(108, 94, 133);
-    opacity:0.9;
-    overflow-x:hidden;
-    padding-top:60px;
-    transition:0.5s;
-  }
-  
-  .side-nav a{
-    padding:10px 10px 10px 30px;
-    text-decoration:none;
-    font-family:'Roboto slab',serif;
-    font-size:22px;
-    color:#ccc;
-    display:block;
-    transition:0.3s;
-  }
-  
-  .side-nav a:hover{
-    color:#fff;
-  }
-  
-  .side-nav .btn-close{
-    position:absolute;
-    top:0;
-    right:22px;
-    font-size:36px;
-    margin-left:50px;
-  }
-  @media(max-width:568px){
-    .navbar-nav{display:none}
-  }
 
 #title{
-    background: #f9296a;
+    background: #913fb7;
     opacity: 0.9;
 }
     #title h1{
@@ -132,7 +73,7 @@ body{
     -webkit-box-shadow: 16px 1px 15px -1px rgba(0,0,0,0.61);
     -moz-box-shadow: 16px 1px 15px -1px rgba(0,0,0,0.61);
     box-shadow: 16px 1px 15px -1px rgba(0,0,0,0.61);
-    background-color: #f73967;
+    background-color: #913fb7;
     padding:25px 32px;
     
     height:50%;
@@ -157,7 +98,7 @@ body{
 
     Input[type=submit]{
       display:inline-block;
-      background-color: #f0cf4f;
+      background-color: #f1924e;
       padding:15px 50px;
       margin:0 0.1em 0.1em 0;
       border:0.16em solid rgba(255,255,255,0);
@@ -296,12 +237,13 @@ select {
 }
 
 select {
-  background-color: #f0cf4f;
+  background-color: #f1924e;
   color: white;
   padding: 12px;
   width: 250px;
   border: none;
   font-size: 20px;
+  font-family:'Roboto Slab',serif ;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
   -webkit-appearance: button;
   appearance: button;

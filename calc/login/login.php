@@ -49,7 +49,8 @@ function protect($string){
             <p><input type="text" id="email" name="email" placeholder="Email"></p> 
             <p><input type="password"  id="password" name="password" placeholder="Password"></p>
             <p><input type="button" name="submit" value="Sign in" id="login"></p>
-            <p><a href="signup.php">SIGN UP NOW</a></p>  
+            <p><a href="signup.php">SIGN UP NOW</a></p>
+            <p><button id="continue">Continue without Logging in</button></p>  
         </form>
         <p id="response"></p>
       </div> 
@@ -57,13 +58,21 @@ function protect($string){
     </div>
   <script src="../js/jquery.js"></script>
   <script type="text/javascript">
+    // document.getElementById("continue").onclick = function () {
+
+    // };
     $(document).ready(function(){
+      $("#continue").on('click',function(){
+        window.location="../home.php";
+      });
       $("#login").on('click',function(){
         var username = $("#username").val();
         var email = $("#email").val();
         var password= $("#password").val();
-        if (email == "" || password == "" || username == "")
+        var continue = $("#continue").val();
+        if (email == "" && password == "" && username == "")
           alert('Please check input');
+          //continue;
         else{
             $.ajax(
             {
@@ -77,7 +86,7 @@ function protect($string){
               },
               success: function (response) {
                 $("#response").html(response);
-                if(response.indexOf('success')>-1){
+                if(response.indexOf('success')> -1){
                   window.location = '../home.php';
                 }
               },
