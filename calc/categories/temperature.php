@@ -1,10 +1,10 @@
 <?php
-  if (file_exists('dbconnect.php')) {
-    require('dbconnect.php');
-    if (mysqli_connect_error()) {
-        die('Connect Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
-    }
+if (file_exists('dbconnect.php')) {
+  require('dbconnect.php');
+  if (mysqli_connect_error()) {
+      die('Connect Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
   }
+}
 //Add function file
 if (file_exists('../includes/functions.php')) {
   require_once('../includes/functions.php');
@@ -145,7 +145,7 @@ $temp_options = array(
                 $opt = optionize($unit);
                 echo "<option value=\"{$opt}\"";
                 if ($from_unit == $opt) {
-                  echo " selected";
+                  echo "selected";
                 }
                 echo ">{$unit}</option>";
               }
