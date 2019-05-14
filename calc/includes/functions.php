@@ -44,7 +44,7 @@ define('VOLUME_TO_LITER' ,array(
     "liters" => 1,
     "milliliters" => 0.001,
     ));
-// Using const with arrays requires PHP 5.6 or higher
+
 const MASS_TO_KILOGRAM = array(
   "ounces" =>	0.0283495,
   "pounds" =>	0.453592,
@@ -68,6 +68,7 @@ function float_to_string($float, $precision=10) {
   return $string;
 }
 // Length
+// Convert every value to meters
 function convert_to_meters($value, $from_unit) {
   if(array_key_exists($from_unit, LENGTH_TO_METER)) {
     return $value * LENGTH_TO_METER[$from_unit];
@@ -76,7 +77,7 @@ function convert_to_meters($value, $from_unit) {
     return "Unsupported unit.";
   }
 }
-  
+
 function convert_from_meters($value, $to_unit) {
   if(array_key_exists($to_unit, LENGTH_TO_METER)) {
     return $value / LENGTH_TO_METER[$to_unit];
@@ -85,7 +86,7 @@ function convert_from_meters($value, $to_unit) {
     return "Unsupported unit.";
     }
 }
-  
+
 function convert_length($value, $from_unit, $to_unit) {
     $meter_value = convert_to_meters($value, $from_unit);
     $new_value = convert_from_meters($meter_value, $to_unit);
@@ -242,4 +243,3 @@ function optionize($string){
     return str_replace(' ','_',strtolower($string));
     
 }
-?>

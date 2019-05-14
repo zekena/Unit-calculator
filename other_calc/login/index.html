@@ -92,38 +92,7 @@
     <script  src="js/index.js"></script>
 
   <script src="../js/jquery.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#login").on('click',function(){
-        var username = $("#username").val();
-        var email = $("#email").val();
-        var password= $("#password").val();
-        if (email == "" || password == "" || username == "")
-          alert('Please check input');
-        else{
-            $.ajax(
-            {
-              url: 'login.php',
-              method: 'POST',
-              data: {
-                login: 1,
-                emailPHP : email,
-                usernamePHP : username,
-                passwordPHP : password
-              },
-              success: function (response) {
-                $("#response").html(response);
-                if(response.indexOf('success')>-1){
-                  window.location = '../home.php';
-                }
-              },
-              dataType: 'text'
-            }
-          );
-        }
-      });
-    });
-  </script>
+
 
 
 </body>
