@@ -14,10 +14,25 @@ function checkForm(){
   var from_value = document.getElementById("from_value").value;
   var to_value = document.getElementById("to_value").value;
   //
-  if (isNaN(num1)){
+  if (isNaN(from_value)){
     document.w
 
   }
   document.getElementById("myForm").submit();
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
