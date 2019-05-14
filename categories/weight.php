@@ -1,8 +1,8 @@
 <?php
- if (file_exists('dbconnect.php')) {
+if (file_exists('dbconnect.php')) {
   require('dbconnect.php');
   if (mysqli_connect_error()) {
-      die('Connect Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
+    die('Connect Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
   }
 }
 //Add function file
@@ -25,7 +25,7 @@ if ($_POST['submit']) {
   $to_value = convert_mass($from_value, $from_unit, $to_unit);
   $sql = "INSERT INTO weight_entry(from_unit,to_unit,from_value,to_value) VALUES ('$from_unit','$to_unit','$from_value','$to_value');";
   if (!mysqli_query($link, $sql)) {
-      die('An error occurred when submitting your review.');
+    die('An error occurred when submitting your review.');
   }
 }
 
@@ -117,17 +117,17 @@ $mass_options = array(
   </nav>
   <div id="side-menu" class="side-nav">
     <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-            <a href="categories/length.php">Length</a>
-            <a href="categories/temperature.php">Temperature</a>
-            <a href="categories/area.php">Area</a>
-            <a href="categories/volume.php">Volume</a>
-            <a href="categories/weight.php">Weight</a>
-            <a href="categories/speed.php">Speed</a>
-            <a href="login/login.php">Log in</a>
+    <a href="length.php">Length</a>
+    <a href="temperature.php">Temperature</a>
+    <a href="area.php">Area</a>
+    <a href="volume.php">Volume</a>
+    <a href="weight.php">Weight</a>
+    <a href="speed.php">Speed</a>
+    <a href="../login/login.php">Log in</a>
 
   </div>
 
-  <script src="../js/slide.js"></script>
+  <script src="../js/frontside.js"></script>
   <div id="title">
     <h1>Weight</h1>
   </div>
@@ -143,15 +143,33 @@ $mass_options = array(
             <input id="Input" class="Input-text" placeholder="Enter amount" name="from_value" value="<?php echo $from_value; ?>" />&nbsp;
             <label for="Input" class="Input-label">Your entry</label>
             <select name="from_unit">
-              <option value="ounces"<?php if($from_unit == 'ounces') { echo " selected"; } ?>>ounces</option>
-              <option value="pounds"<?php if($from_unit == 'pounds') { echo " selected"; } ?>>pounds</option>
-              <option value="stones"<?php if($from_unit == 'stones') { echo " selected"; } ?>>stones</option>
-              <option value="long_tons"<?php if($from_unit == 'long_tons') { echo " selected"; } ?>>long tons</option>
-              <option value="short_tons"<?php if($from_unit == 'short_tons') { echo " selected"; } ?>>short tons</option>
-              <option value="milligrams"<?php if($from_unit == 'milligrams') { echo " selected"; } ?>>milligrams</option>
-              <option value="grams"<?php if($from_unit == 'grams') { echo " selected"; } ?>>grams</option>
-              <option value="kilograms"<?php if($from_unit == 'kilograms') { echo " selected"; } ?>>kilograms</option>
-              <option value="metric_tonnes"<?php if($from_unit == 'metric_tonnes') { echo " selected"; } ?>>metric tonnes</option>
+              <option value="ounces" <?php if ($from_unit == 'ounces') {
+                                        echo " selected";
+                                      } ?>>ounces</option>
+              <option value="pounds" <?php if ($from_unit == 'pounds') {
+                                        echo " selected";
+                                      } ?>>pounds</option>
+              <option value="stones" <?php if ($from_unit == 'stones') {
+                                        echo " selected";
+                                      } ?>>stones</option>
+              <option value="long_tons" <?php if ($from_unit == 'long_tons') {
+                                          echo " selected";
+                                        } ?>>long tons</option>
+              <option value="short_tons" <?php if ($from_unit == 'short_tons') {
+                                            echo " selected";
+                                          } ?>>short tons</option>
+              <option value="milligrams" <?php if ($from_unit == 'milligrams') {
+                                            echo " selected";
+                                          } ?>>milligrams</option>
+              <option value="grams" <?php if ($from_unit == 'grams') {
+                                      echo " selected";
+                                    } ?>>grams</option>
+              <option value="kilograms" <?php if ($from_unit == 'kilograms') {
+                                          echo " selected";
+                                        } ?>>kilograms</option>
+              <option value="metric_tonnes" <?php if ($from_unit == 'metric_tonnes') {
+                                              echo " selected";
+                                            } ?>>metric tonnes</option>
             </select>
           </div>
 
@@ -159,15 +177,33 @@ $mass_options = array(
             <input readonly id="Input" class="Input-text" placeholder="Wait for it" name="to_value" value="<?php echo float_to_string($to_value); ?>" />&nbsp;
             <label for="Input" class="input-label">Converted Result</label>
             <select name="to_unit">
-              <option value="ounces"<?php if($to_unit == 'ounces') { echo " selected"; } ?>>ounces</option>
-              <option value="pounds"<?php if($to_unit == 'pounds') { echo " selected"; } ?>>pounds</option>
-              <option value="stones"<?php if($to_unit == 'stones') { echo " selected"; } ?>>stones</option>
-              <option value="long_tons"<?php if($to_unit == 'long_tons') { echo " selected"; } ?>>long tons/option>
-              <option value="short_tons"<?php if($to_unit == 'short_tons') { echo " selected"; } ?>>short tons</option>
-              <option value="milligrams"<?php if($to_unit == 'milligrams') { echo " selected"; } ?>>milligrams</option>
-              <option value="grams"<?php if($to_unit == 'grams') { echo " selected"; } ?>>grams</option>
-              <option value="kilograms"<?php if($to_unit == 'kilograms') { echo " selected"; } ?>>kilograms</option>
-              <option value="metric_tonnes"<?php if($to_unit == 'metric_tonnes') { echo " selected"; } ?>>metric tonnes</option>
+              <option value="ounces" <?php if ($to_unit == 'ounces') {
+                                        echo " selected";
+                                      } ?>>ounces</option>
+              <option value="pounds" <?php if ($to_unit == 'pounds') {
+                                        echo " selected";
+                                      } ?>>pounds</option>
+              <option value="stones" <?php if ($to_unit == 'stones') {
+                                        echo " selected";
+                                      } ?>>stones</option>
+              <option value="long_tons" <?php if ($to_unit == 'long_tons') {
+                                          echo " selected";
+                                        } ?>>long tons/option>
+              <option value="short_tons" <?php if ($to_unit == 'short_tons') {
+                                            echo " selected";
+                                          } ?>>short tons</option>
+              <option value="milligrams" <?php if ($to_unit == 'milligrams') {
+                                            echo " selected";
+                                          } ?>>milligrams</option>
+              <option value="grams" <?php if ($to_unit == 'grams') {
+                                      echo " selected";
+                                    } ?>>grams</option>
+              <option value="kilograms" <?php if ($to_unit == 'kilograms') {
+                                          echo " selected";
+                                        } ?>>kilograms</option>
+              <option value="metric_tonnes" <?php if ($to_unit == 'metric_tonnes') {
+                                              echo " selected";
+                                            } ?>>metric tonnes</option>
             </select>
 
           </div>
