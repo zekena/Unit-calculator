@@ -133,13 +133,12 @@ body{
     -moz-box-shadow: 16px 1px 15px -1px rgba(0,0,0,0.61);
     box-shadow: 16px 1px 15px -1px rgba(0,0,0,0.61);
     background-color: #3FB74F;
-    padding:25px 32px;
-    
+    padding:5px 32px;
     height:50%;
     border-radius: 17px;
-    width: 50%;
+    width: 80%;
     position: relative;
-    top: 150px;
+    top: 10px;
 }
     #theme {
         position: relative;

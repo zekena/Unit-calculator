@@ -135,9 +135,9 @@ body{background-image: url("../temp.jpg");
     
     height:50%;
     border-radius: 17px;
-    width: 50%;
+    width: 80%;
     position: relative;
-    top: 150px;
+    top: 10px;
 }
     #theme {
         position: relative;
