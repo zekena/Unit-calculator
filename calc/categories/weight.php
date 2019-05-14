@@ -146,33 +146,31 @@ $mass_options = array(
             <input id="Input" class="Input-text" placeholder="Enter amount" name="from_value" value="<?php echo $from_value; ?>" />&nbsp;
             <label for="Input" class="Input-label">Your entry</label>
             <select name="from_unit">
-              <?php
-              foreach ($mass_options as $unit) {
-                $opt = optionize($unit);
-                echo "<option value=\"{$opt}\"";
-                if ($from_unit == $opt) {
-                  echo " selected";
-                }
-                echo ">{$unit}</option>";
-              }
-              ?>
+              <option value="ounces"<?php if($from_unit == 'ounces') { echo " selected"; } ?>>ounces</option>
+              <option value="pounds"<?php if($from_unit == 'pounds') { echo " selected"; } ?>>pounds</option>
+              <option value="stones"<?php if($from_unit == 'stones') { echo " selected"; } ?>>stones</option>
+              <option value="long_tons"<?php if($from_unit == 'long_tons') { echo " selected"; } ?>>long tons</option>
+              <option value="short_tons"<?php if($from_unit == 'short_tons') { echo " selected"; } ?>>short tons</option>
+              <option value="milligrams"<?php if($from_unit == 'milligrams') { echo " selected"; } ?>>milligrams</option>
+              <option value="grams"<?php if($from_unit == 'grams') { echo " selected"; } ?>>grams</option>
+              <option value="kilograms"<?php if($from_unit == 'kilograms') { echo " selected"; } ?>>kilograms</option>
+              <option value="metric_tonnes"<?php if($from_unit == 'metric_tonnes') { echo " selected"; } ?>>metric tonnes</option>
             </select>
           </div>
 
           <div class="entry">
-            <input id="Input" class="Input-text" placeholder="Wait for it" name="to_value" value="<?php echo float_to_string($to_value); ?>" />&nbsp;
+            <input readonly id="Input" class="Input-text" placeholder="Wait for it" name="to_value" value="<?php echo float_to_string($to_value); ?>" />&nbsp;
             <label for="Input" class="input-label">Converted Result</label>
             <select name="to_unit">
-              <?php
-              foreach ($mass_options as $unit) {
-                $opt = optionize($unit);
-                echo "<option value=\"{$opt}\"";
-                if ($from_unit == $opt) {
-                  echo " selected";
-                }
-                echo ">{$unit}</option>";
-              }
-              ?>
+              <option value="ounces"<?php if($to_unit == 'ounces') { echo " selected"; } ?>>ounces</option>
+              <option value="pounds"<?php if($to_unit == 'pounds') { echo " selected"; } ?>>pounds</option>
+              <option value="stones"<?php if($to_unit == 'stones') { echo " selected"; } ?>>stones</option>
+              <option value="long_tons"<?php if($to_unit == 'long_tons') { echo " selected"; } ?>>long tons/option>
+              <option value="short_tons"<?php if($to_unit == 'short_tons') { echo " selected"; } ?>>short tons</option>
+              <option value="milligrams"<?php if($to_unit == 'milligrams') { echo " selected"; } ?>>milligrams</option>
+              <option value="grams"<?php if($to_unit == 'grams') { echo " selected"; } ?>>grams</option>
+              <option value="kilograms"<?php if($to_unit == 'kilograms') { echo " selected"; } ?>>kilograms</option>
+              <option value="metric_tonnes"<?php if($to_unit == 'metric_tonnes') { echo " selected"; } ?>>metric tonnes</option>
             </select>
 
           </div>

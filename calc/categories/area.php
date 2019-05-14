@@ -104,13 +104,31 @@ if ($_POST['submit']) {
                     Be able to input number from either box.-->
                     <input id="Input" class="Input-text" placeholder="Enter amount" name="from_value" value="<?php echo $from_value; ?>" />&nbsp; <label for="Input" class="Input-label">Your entry</label>
                     <select name="from_unit">
-                        <?php echo area_options(); ?>
+                        <option value="square_inches"<?php if($from_unit == 'square_inches') { echo " selected"; } ?>>square inches</option>
+                        <option value="square_feet"<?php if($from_unit == 'square_feet') { echo " selected"; } ?>>square feet</option>
+                        <option value="square_yards"<?php if($from_unit == 'square_yards') { echo " selected"; } ?>>square yards</option>
+                        <option value="square_miles"<?php if($from_unit == 'square_miles') { echo " selected"; } ?>>square miles</option>
+                        <option value="square_millimeters"<?php if($from_unit == 'square_millimeters') { echo " selected"; } ?>>square millimeters</option>
+                        <option value="square_centimeters"<?php if($from_unit == 'square_centimeters') { echo " selected"; } ?>>square centimeters</option>
+                        <option value="square_meters"<?php if($from_unit == 'square_meters') { echo " selected"; } ?>>square meters</option>
+                        <option value="square_kilometers"<?php if($from_unit == 'square_kilometers') { echo " selected"; } ?>>square kilometers</option>
+                        <option value="acres"<?php if($from_unit == 'acres') { echo " selected"; } ?>>acres</option>
+                        <option value="hectares"<?php if($from_unit == 'hectares') { echo " selected"; } ?>>hectares</option> 
                     </select>
                     <br>
-                    <input id="Input" class="Input-text" placeholder="Wait for it" name="to_value" value=" <?php echo $to_value; ?>" />&nbsp;
+                    <input readonly id="Input" class="Input-text" placeholder="Wait for it" name="to_value" value=" <?php echo $to_value; ?>" />&nbsp;
                     <label for="Input" class="input-label">Converted Result</label>
                     <select name="to_unit">
-                        <?php echo area_options(); ?>
+                        <option value="square_inches"<?php if($to_unit == 'square_inches') { echo " selected"; } ?>>square inches</option>
+                        <option value="square_feet"<?php if($to_unit == 'square_feet') { echo " selected"; } ?>>square feet</option>
+                        <option value="square_yards"<?php if($to_unit == 'square_yards') { echo " selected"; } ?>>square yards</option>
+                        <option value="square_miles"<?php if($to_unit == 'square_miles') { echo " selected"; } ?>>square miles</option>
+                        <option value="square_millimeters"<?php if($to_unit == 'square_millimeters') { echo " selected"; } ?>>square millimeters</option>
+                        <option value="square_centimeters"<?php if($to_unit == 'square_centimeters') { echo " selected"; } ?>>square centimeters</option>
+                        <option value="square_meters"<?php if($to_unit == 'square_meters') { echo " selected"; } ?>>square meters</option>
+                        <option value="square_kilometers"<?php if($to_unit == 'square_kilometers') { echo " selected"; } ?>>square kilometers</option>
+                        <option value="acres"<?php if($to_unit == 'acres') { echo " selected"; } ?>>acres</option>
+                        <option value="hectares"<?php if($to_unit == 'hectares') { echo " selected"; } ?>>hectares</option>
                     </select>
                     <div id="reset" class="button">
                         <input type="submit" name="submit" value="Submit" />

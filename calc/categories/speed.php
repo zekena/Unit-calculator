@@ -98,7 +98,7 @@ $speed_options = array(
                 $opt = optionize($unit);
                 echo "<option value=\"{$opt}\"";
                 if ($_POST[$from_unit] == $opt) {
-                  echo " selected";
+                  echo 'selected="selected"';
                 }
                 echo ">{$unit}</option>";
               }
@@ -107,15 +107,15 @@ $speed_options = array(
           </div>
 
           <div class="entry">
-            <input id="Input" class="Input-text" placeholder="Wait for it" name="to_value" value="<?php echo float_to_string($to_value); ?>" />&nbsp;
+            <input readonly id="Input" class="Input-text" placeholder="Wait for it" name="to_value" value="<?php echo float_to_string($to_value); ?>" />&nbsp;
             <label for="Input" class="input-label">Converted Result</label>
             <select name="to_unit">
               <?php
               foreach ($speed_options as $unit) {
                 $opt = optionize($unit);
                 echo "<option value=\"{$opt}\"";
-                if ($from_unit == $opt) {
-                  echo " selected";
+                if ($_POST[$to_unit] == $opt) {
+                  echo 'selected="selected"';
                 }
                 echo ">{$unit}</option>";
               }
