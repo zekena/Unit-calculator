@@ -111,16 +111,13 @@ $temp_options = array(
   </nav>
   <div id="side-menu" class="side-nav">
     <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-    <a href="#">About Us</a>
-    <a href=" length.php">Length</a>
-    <a href=" temperature.php">Temperature</a>
-    <a href=" area.php">Area</a>
-    <a href=" volume.php">Volume</a>
-    <a href=" weight.php">Weight</a>
-    
-    <a href=" speed.php">Speed</a>
-    <a href="../login">Log in</a>
-    <a href="../login/signup.php">Sign up</a>
+    <a href="categories/length.php">Length</a>
+            <a href="categories/temperature.php">Temperature</a>
+            <a href="categories/area.php">Area</a>
+            <a href="categories/volume.php">Volume</a>
+            <a href="categories/weight.php">Weight</a>
+            <a href="categories/speed.php">Speed</a>
+            <a href="login/login.php">Log in</a>
 
   </div>
 

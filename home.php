@@ -107,7 +107,6 @@ $message = '';
         </nav>
         <div id="side-menu" class="side-nav">
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-            <a href="#">About Us</a>
             <a href="categories/length.php">Length</a>
             <a href="categories/temperature.php">Temperature</a>
             <a href="categories/area.php">Area</a>
