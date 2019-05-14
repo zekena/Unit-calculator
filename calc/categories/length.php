@@ -1,10 +1,12 @@
 <?php
+
 if (file_exists('dbconnect.php')) {
   require('dbconnect.php');
   if (mysqli_connect_error()) {
       die('Connect Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
   }
 }
+
 //Add function files
 require('options.php');
 if (file_exists('../includes/functions.php')) {
@@ -159,15 +161,15 @@ function length_options(){
           <!-- calculator input and output-->
           <!--Add function to recieve number,
                     Be able to input number from either box.-->
-          <input id="Input" class="Input-text" placeholder="Enter amount" name="from_value" value="<?php echo $from_value; ?>" />&nbsp; <label for="Input" class="Input-label">Your entry</label>
+          <input id="from_value" class="Input-text" placeholder="Enter amount" name="from_value" value="<?php echo $from_value; ?>" />&nbsp; <label for="Input" class="Input-label">Your entry</label>
           <label for="input" class="Input-label">Your Entry</label>
-          <select name="from_unit">
+          <select id="from_unit"name="from_unit">
             <?php echo length_options(); ?>
           </select>
           <br>
-          <input id="Input" class="Input-text" placeholder="Wait for it" name="to_value" value=" <?php echo $to_value; ?>" />&nbsp;
+          <input readonly id="Input" class="Input-text" placeholder="Wait for it" name="to_value" value=" <?php echo $to_value; ?>" />&nbsp;
           <label for="input" class="input-label">Converted result</label>
-          <select name="to_unit">
+          <select id = "to_unit" name="to_unit">
             <?php echo length_options(); ?>
           </select>
 
