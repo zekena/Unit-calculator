@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Passion+One|Roboto+Slab');
 
 * {
     -moz-box-sizing: border-box;
@@ -92,13 +93,14 @@
   }
   
   #login form input[type=text], input[type=password]{
-    background-color: #25405f;
-    border-radius: 60px 60px 60px 60px;
+    background-color: #a6b2d085;
     color: #30363b;
     margin-bottom: 1em;
     padding: 25px;
-    width: 225px;
-    margin-left: 25px;
+    width: 280px;
+    border-block: radius:3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
   }
   
   input[type=button] {
@@ -109,16 +111,20 @@
     color: rgb(234, 182, 182);
     font-weight: bold;
     margin-bottom: 2em;
-  
     width: 280px;
+    font-family: 'Dosis',serif;
   }
   
-  #login form input[type="submit"]:hover {
-    background-color: #be3636;
+  input[type=button]:hover {
+    background-color: #a6b2d085;
     opacity: 0.7;
     color: #100f0f;
+    font-family: 'Passion one',cursive; 
+    font-size:30px;
   }
-  
+  #login form input[type=text], input[type=password]{
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 1.6rem var(--colorPrimary600)}
   #login > p {
     text-align: center;
   }
@@ -126,4 +132,6 @@
   #login > p span {
     padding-left: 5px;
   }
-  
+#login form input[type=text]:focus::placeholder-shown, input[type=password]:focus::placeholder-shown   {
+color: transparent;
+}
