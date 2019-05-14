@@ -1,10 +1,11 @@
 <?php
     session_start();
     if(!isset($_SESSION['loggedIN'])){
-        header('Location: login/login.php');
+        //header('Location: login/login.php');
         exit();
     }
 ?>
+
 <!DOCTYPE html>
 <!--
 This is the front page of the unit calculator,
@@ -18,8 +19,8 @@ Simple, Fancy and Currency conversion
     <meta name="description" content="Unit Calc.">
     <meta name="author" content="Yusef,Zeyad">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Browsing for Tablet or Phone dimensions-->
     
+<!--Browsing for Tablet or Phone dimensions-->
 <link rel="stylesheet" href="css/style.css"/>
      <style>
             @import url('https://fonts.googleapis.com/css?family=Passion+One|Roboto+Slab');
@@ -73,7 +74,9 @@ Simple, Fancy and Currency conversion
                     <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
                 </svg>
             </a>
+            <a href="">Logout?</a>
          </span>
+         
      </nav>
      <div id="side-menu" class="side-nav">
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>

@@ -1,7 +1,5 @@
 <?php
 
-require('dbconnect.php');
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 // Definitions 
 if (file_exists('dbconnect.php')) {
     require('dbconnect.php');
@@ -30,12 +28,9 @@ if ($_POST['submit']) {
     //$mysqli = new mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
     // mysql_query("INSERT INTO area_entry (from_unit,to_unit,from_value,to_value) VALUES ()");
     $sql = "INSERT INTO area_entry(from_unit,to_unit,from_value,to_value) VALUES ('$from_unit','$to_unit','$from_value','$to_value');";
-    echo $sql;
     if (!mysqli_query($link, $sql)) {
         die('An error occurred when submitting your review.');
-    } else {
-        echo "Thanks for your review.";
-    }
+    } 
     /*
   if($link->query($sql)){
       echo "Record Added";
@@ -48,29 +43,6 @@ if ($_POST['submit']) {
 
     mysqli_close($link);
 }
-
-
-function area_options()
-{
-    $area_options = array(
-        "square_inches" => 0.0254,
-        "square_feet" => 0.3048,
-        "square_yards" => 0.9144,
-        "square_miles" => 1609.344,
-        "square_millimeters" => 0.001,
-        "square_centimeters" => 0.01,
-        "square_meters" => 1,
-        "square_kilometers" => 1000,
-        "acres" => 63.614907234075,
-        "hectares" => 100
-    );
-    $choice = '';
-    while (list($k, $v) = each($area_options)) {
-        $choice .= '<option value = "' . $k . '">' . $k . '</option>';
-    }
-    return $choice;
-}
-
 
 ?>
 
@@ -116,7 +88,7 @@ function area_options()
 
   </div>
 
-  <script src="../js/frontSide.js"></script>
+  <script src="../js/slide.js"></script>
   <div id="title">
     <h1>Area</h1>
   </div>

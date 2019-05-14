@@ -1,4 +1,10 @@
 <?php
+if (file_exists('dbconnect.php')) {
+  require('dbconnect.php');
+  if (mysqli_connect_error()) {
+      die('Connect Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
+  }
+}
 //Add function file
 if (file_exists('../includes/functions.php')) {
   require_once('../includes/functions.php');
@@ -17,6 +23,10 @@ if ($_POST['submit']) {
   $to_unit = $_POST['to_unit'];
 
   $to_value = convert_temp($from_value, $from_unit, $to_unit);
+  $sql = "INSERT INTO temperature_entry(from_unit,to_unit,from_value,to_value) VALUES ('$from_unit','$to_unit','$from_value','$to_value');";
+  if (!mysqli_query($link, $sql)) {
+      die('An error occurred when submitting your review.');
+  }
 }
 
 $temp_options = array(
@@ -114,7 +124,7 @@ $temp_options = array(
 
   </div>
 
-  <script src="../js/frontSide.js"></script>
+  <script src="../js/slide.js"></script>
   <div id="title">
     <h1>Temperature</h1>
   </div>
@@ -135,7 +145,7 @@ $temp_options = array(
                 $opt = optionize($unit);
                 echo "<option value=\"{$opt}\"";
                 if ($from_unit == $opt) {
-                  echo " selected";
+                  echo "selected";
                 }
                 echo ">{$unit}</option>";
               }
