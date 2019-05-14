@@ -114,8 +114,7 @@ $message = '';
             <a href="categories/volume.php">Volume</a>
             <a href="categories/weight.php">Weight</a>
             <a href="categories/speed.php">Speed</a>
-            <a href="login">Log in</a>
-            <a href="login/signup.php">Sign up</a>
+            <a href="login/login.php">Log in</a>
         </div>
         <script src="js/frontSide.js"></script>
         <section id="banner">
@@ -125,7 +124,7 @@ $message = '';
                     <p> An interactive Unit Calculator for all your needs. </p>
                     <a href="#main" class="more">Choose Conversion</a>
                 </header>
-                <a class="log" href="/login/index.html">login
+                <a class="log" href="/calc/login/login.php">login
                     <p>Restore your calculations</p></a>
             </div>
         </section>
