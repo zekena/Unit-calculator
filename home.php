@@ -6,7 +6,11 @@ if ($_POST['submit']) {
     $name = $_POST['name'];
     $message = $_POST['message'];
     $email = $_POST['email'];
+    $message = "Thanks we will contact u soon";
+    echo "<script type='text/javascript'>alert('$message');</script>";
 }
+
+
 $file_open = fopen("contact_data.csv", "a");
 $no_rows = count(file("contact_data.csv"));
 if ($no_rows > 1) {
